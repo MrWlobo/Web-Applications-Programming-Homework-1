@@ -1,0 +1,168 @@
+main{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgb(221, 227, 233);
+    color: rgb(16, 16, 16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(16, 16, 16);
+    color: rgb(221, 227, 233);
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none; 
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li span {
+    color: rgb(221, 227, 233);
+    text-decoration: none;
+    padding: 10px 15px; 
+    display: block; 
+    cursor: pointer;
+}
+
+.nav-links li span:hover {
+    background-color: rgb(55, 55, 55);
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: rgb(55, 55, 55);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 10;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li span {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.dropdown-content li:hover span {
+    color: rgb(41, 192, 192);
+}
+
+
+.submenu {
+    position: relative;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    top: 0; 
+    left: 100%; 
+    color: rgb(16, 16, 16);
+    background-color: rgb(55, 55, 55);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 11;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu:hover > .submenu-content {
+    display: block;
+}
+
+.dropdown-content .submenu-content li span {
+    color: rgb(221, 227, 233);
+}
+
+.submenu-content li:hover span {
+    color: rgb(41, 192, 192);
+}
+
+.main-content {
+    text-align: center;
+    padding-top: 150px;
+}
+.main-content h1 {
+    font-size: 32px;
+}
+.main-content p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        position: static;
+        margin-top: 10px;
+        background-color: #000;
+        display: flex; 
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #333;
+    }
+    
+    .dropdown-content, .submenu-content {
+        position: static;
+        width: 100%;
+        background-color: #111;
+        display: none; 
+    }
+    
+    .dropdown:hover > .dropdown-content {
+        display: block;
+    }
+    
+    .submenu-content {
+        left: 0;
+        right: auto;
+    }
+}
