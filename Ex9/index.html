@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <input type="radio" id="size-xs" name="size-select" checked> <input type="radio" id="size-s" name="size-select">
+    <input type="radio" id="size-m" name="size-select">
+    <input type="radio" id="size-l" name="size-select">
+    <input type="radio" id="size-xl" name="size-select">
+
+    <div class="product-card-wrapper">
+        <input type="radio" id="color-blue" name="color-select" checked> 
+        <input type="radio" id="color-orange" name="color-select">
+        <input type="radio" id="color-white" name="color-select">
+
+        <div class="product-card">
+            <div class="card-background">
+                <div class="product-image-container">
+                    <img class="product-image blue-img" src="images/t-shirt-blue.png">
+                    <img class="product-image orange-img" src="images/t-shirt-orange.png">
+                    <img class="product-image white-img" src="images/t-shirt-white.png">
+                </div>
+            </div>
+
+            <div class="card-details">
+                <div class="price-section">
+                    <p class="brand">Adidas Originals</p>
+                    <p class="price">$29.99</p>
+                </div>
+                <p class="description">Men's running t-shirt</p>
+
+                <div class="selection-group">
+                    <p class="label">SIZE:</p>
+                    <div class="options size-options">
+                        <label for="size-xs" class="option">XS</label>
+                        <label for="size-s" class="option">S</label>
+                        <label for="size-m" class="option">M</label>
+                        <label for="size-l" class="option">L</label>
+                        <label for="size-xl" class="option">XL</label>
+                    </div>
+                </div>
+
+                <div class="selection-group">
+                    <p class="label">COLOUR:</p>
+                    <div class="options color-options">
+                        <label for="color-blue" class="color-swatch blue"></label>
+                        <label for="color-orange" class="color-swatch orange"></label>
+                        <label for="color-white" class="color-swatch white"></label>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <button class="btn buy-now">BUY NOW</button>
+                    <button class="btn add-to-cart">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
