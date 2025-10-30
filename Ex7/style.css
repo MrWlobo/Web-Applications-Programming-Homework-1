@@ -113,3 +113,16 @@ body {
 .yellow-text{
     color: rgb(255, 220, 0);
 }
+
+@media (max-width: 768px) {
+    .timetable {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .timetable th,
+    .timetable td {
+        min-width: 100px;
+    }
+}
